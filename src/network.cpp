@@ -17,7 +17,7 @@ void QKDRoutingEngine::inject_eve_attack(const std::string& link_id) {
     if (link_lookups.find(link_id) != link_lookups.end()) {
         link_lookups[link_id]->qber = 0.15; // Fehlerrate auf 15% hochjagen
         std::cout << "[WARNUNG] Eve-Angriff auf Link injiziert: " << link_id << std::endl;
-    }
+    };
 }
 
 std::vector<Link> QKDRoutingEngine::get_links_from(const std::string& node_id) {

@@ -5,6 +5,7 @@
 #include <string>
 #include <vector>
 #include <unordered_map>
+#include <memory>
 
 struct Node {
     std::string id;
@@ -22,7 +23,7 @@ struct Link {
         if(qber >= 0.11){
             return 999999.0;
         }
-        return latency_ms * (1.0 +(qber * 10.0))
+        return latency_ms * (1.0 +(qber * 10.0));
     }
 
     
@@ -33,14 +34,14 @@ public:
     void add_node(const Node& node);
     void add_link(const Link& link);
 
-    void injective_eve_attack(const std::string& link_id);
+    void inject_eve_attack(const std::string& link_id);
 
-    std:vector<Link> get_links_from(const std::string& node_id);
+    std::vector<Link> get_links_from(const std::string& node_id);
 
 private:
     std::unordered_map<std::string, Node> nodes;
-    std::unordered_map<std::string, std::vector<Link>> adjacency_list;
-    std::unordered_map<std::string, Link*> link_lookups;
+    std::unordered_map<std::string, std::vector<std::unique_ptr<Link>>> adjacency_list;
+    std::unordered_map<std::string, std::vector<Link>> link_lookups;
 
 
 };
