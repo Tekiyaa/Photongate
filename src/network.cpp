@@ -8,7 +8,7 @@ void QKDRoutingEngine::add_node(const Node& node) {
 
 void QKDRoutingEngine::add_link(const Link& link) {
     adjacency_list[link.source_id].push_back(link);
-    Link& inserted_link = adjacency_list[link.source_id].back();
+    std::vector<std::unique_ptr<Link>> inserted_link = adjacency_list[link.source_id].back();
     link_lookups[link.id] = &inserted_link;
     std::cout << "[C++] Laser-Link verknüpft: " << link.id << std::endl;
 }
