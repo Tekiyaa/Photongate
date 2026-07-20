@@ -1,0 +1,3 @@
+/home/mikato/projects/photongate/Photongate/build/CMakeFiles/hotongate_app.dir
+/home/mikato/projects/photongate/Photongate/build/CMakeFiles/edit_cache.dir
+/home/mikato/projects/photongate/Photongate/build/CMakeFiles/rebuild_cache.dir

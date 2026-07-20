@@ -14,7 +14,7 @@ struct Node {
 struct Link {
     std::string id;
     std::string source_id;
-    std::string target_id
+    std::string target_id;
     double latency_ms;
     double qber = 0.02;
 
