@@ -1,7 +1,0 @@
-{
-	"InstallScripts" : 
-	[
-		"/home/mikato/projects/photongate/Photongate/build/cmake_install.cmake"
-	],
-	"Parallel" : false
-}

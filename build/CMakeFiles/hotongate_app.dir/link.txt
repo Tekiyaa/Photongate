@@ -1,1 +1,0 @@
-/usr/bin/g++ -g -Wl,--dependency-file=CMakeFiles/hotongate_app.dir/link.d CMakeFiles/hotongate_app.dir/src/main.cpp.o CMakeFiles/hotongate_app.dir/src/network.cpp.o -o hotongate_app
